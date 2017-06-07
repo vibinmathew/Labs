@@ -1,0 +1,5 @@
+{
+  "directory": "bower_components",
+  "proxy": "http://d821285:Telstra123456@http-gw.tcif.telstra.com.au:8080",
+  "https-proxy":"http://d821285:Telstra123456@http-gw.tcif.telstra.com.au:8080"
+}

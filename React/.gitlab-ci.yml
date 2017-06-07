@@ -1,0 +1,75 @@
+stages:
+  - build
+  - deploy
+  - test
+
+build:api:
+  stage: build
+  image: java
+  script:
+    - cd datacat-api
+    - export GRADLE_USER_HOME=`pwd`/.gradle
+    - ./gradlew build
+  artifacts:
+    paths:
+    - datacat-api/build/libs/
+  cache:
+    paths:
+       - datacat-api/.gradle
+
+build:web:
+  stage: build
+  image: kkarczmarczyk/node-yarn
+  script:
+    - cd datacat-web
+    - yarn install
+    - yarn test
+    - yarn build
+  artifacts:
+    paths:
+    - datacat-web/build/
+  cache:
+    paths:
+       - datacat-web/node_modules
+
+delploy:api:
+  stage: deploy
+  image: paasmule/cf-cli
+  script:
+    - cd datacat-api
+    - cf login -a $CF_URL -u $CF_USERNAME -p $CF_PASSWORD -o $CF_ORG -s $CF_SPACE_PRODUCTION
+    - cf push -f manifest.yml
+  dependencies:
+    - build:api
+  environment:
+    name: production-api
+
+deploy:web:
+  stage: deploy
+  image: paasmule/cf-cli
+  script:
+    - cd datacat-web
+    - cf login -a $CF_URL -u $CF_USERNAME -p $CF_PASSWORD -o $CF_ORG -s $CF_SPACE_PRODUCTION
+    - cf push -f manifest.yml
+  dependencies:
+    - build:web
+  environment:
+    name: production-web
+
+test:acceptance:
+  stage: test
+  image: telstradatacat/ci
+  script:
+    - cd datacat-acceptance
+    - export GRADLE_USER_HOME=`pwd`/.gradle
+    - BASE_URL=https://datacat.cfapps.io API_BASE_URL=https://datacat-api.cfapps.io xvfb-run ../gradlew test
+  after_script:
+    - mv datacat-acceptance/build/reports/tests public
+  cache:
+    paths:
+       - datacat-acceptance/.gradle
+  dependencies: []
+  artifacts:
+    when: on_failure
+    paths:
+      - public

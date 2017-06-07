@@ -1,0 +1,29 @@
+
+.main-content {
+    margin: 10px;
+}
+.dashboard-help-text {
+    font-family: Akkurat;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: center;
+    color: #2d86ca;
+}
+.help-text {
+    font-family: Akkurat-Light;
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    color: #333333;
+    margin: 18px 0;
+}
+.datausage, .datapack, .managemydata {
+    margin-top: 48px;
+}
+.st0{fill:#D9E9F5;}
+.st1{fill:url(#Path-3_1_);}
+
+.header-section .gradient {
+    height: 100%;
+    width: 100%;
+}

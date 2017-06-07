@@ -1,0 +1,77 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.message-centered {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.loading-text, .error-text, .info-text, .try-again-text {
+  font-family: HelveticaNeue-Light, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #333333;
+  padding-top: 40px;
+}
+
+.loading-text, .error-text, .info-text {
+  font-size: 24px;
+  padding: 40px 60px 0px 60px;
+}
+
+/* recharts */
+.outer-container {
+  height: 14em;
+  position: relative;
+  z-index: -999;
+}
+#container {
+  height: 17em;
+  padding: 0.5em;
+}
+.recharts-cartesian-axis-line {
+  stroke: #e4e4e4;
+}
+.x-axis-label {
+  font-family: HelveticaNeue;
+  font-size: 10px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  fill: #949494;
+}
+
+/* recharts - legend */
+.graph-legend {
+  font-size: 10px;
+  color: #333333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.graph-legend span {
+  margin: 0 3px;
+}
+.App {
+  min-height: 350px;
+  min-width: 320px;
+}
+

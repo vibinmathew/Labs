@@ -1,0 +1,35 @@
+endpoints:
+  enabled: false
+
+feature:
+  datapacks: false
+
+rabbitmq:
+  send-sms:
+    retry-max: 9
+    retry-holding-time: 30000
+
+management:
+  security:
+    enabled: false
+sms:
+  gateway:
+    url: https://api.telstra.com/v1/sms/messages
+
+security:
+  oauth2:
+    client:
+      access-token-uri: https://api.telstra.com/v1/oauth/token
+      grant-type: client_credentials
+      scope: SMS
+
+data-usage:
+  notifications:
+    numberOfDaysBefore: 1
+    table-name: ondb
+
+spring:
+  redis:
+    host: localhost
+    port: 6379
+    password:

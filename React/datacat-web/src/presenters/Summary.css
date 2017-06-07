@@ -1,0 +1,65 @@
+@font-face {
+    font-family: Gravur;
+    src: url('./fonts/GravurCondensed-Bold.otf');
+}
+
+.usage-container {
+    padding: 1.4em 0;
+    background-color: #f4f4f4;
+    text-align: center;
+    font-weight: normal;
+}
+
+div.data-used {
+    padding-bottom: 0.5em;
+}
+
+div.data-used span {
+    padding: 0 10px;
+    font-size: 40px;
+    font-family: Gravur;
+    color: #555555;
+}
+
+div.data-used span.usage {
+    border-right: 1px solid #a5a5a5;
+}
+
+div.data-used span.allowance {
+    padding: 0px;
+}
+
+div.data-used span sup {
+    font-size: 16px;
+    vertical-align: text-top;
+}
+
+sup {
+    /* Move the superscripted text up */
+    top: -0.5em;
+}
+
+div.days-left {
+    font-family: HelveticaNeue;
+    font-size: 12px;
+    color: #333333;
+}
+
+.previous-cycle {
+    border-radius: 2px;
+    background-color: #a5a5a5;
+    padding: 2px 4px;
+
+    font-family: HelveticaNeue;
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
+.text-red {
+    color: #e83319 !important;
+}

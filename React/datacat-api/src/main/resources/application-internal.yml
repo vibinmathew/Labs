@@ -1,0 +1,17 @@
+sms:
+  gateway:
+    url: https://api.telstra.com/v1/notification-mgmt/events
+    notificationEventType: B2BSMSP_PILOT_3
+    entityType: NOT_APPLICABLE
+    staticUrl: http://tel.st/data-cat-trial
+
+security:
+  oauth2:
+    client:
+      access-token-uri: https://api.telstra.com/v1/oauth/token
+      grant-type: client_credentials
+      scope: NOTIFICATION-MGMT
+
+data-usage:
+  notifications:
+    table-name: dui.vw_ondb_1

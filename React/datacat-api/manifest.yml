@@ -1,0 +1,15 @@
+---
+applications:
+  - name: datacat-api
+    host: datacat-api
+    buildpack: java_buildpack
+    path: build/libs/datacat-0.0.1-SNAPSHOT.jar
+    instances: 2
+    services:
+      - telstra-dev-api
+      - mock-rti
+      - frontend
+      - redis
+      - rti-db
+      - rabbitmq
+      - feature-toggles

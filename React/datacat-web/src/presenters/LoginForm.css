@@ -1,0 +1,90 @@
+.login{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: HelveticaNeue, sans-serif;
+    text-align: center;
+}
+
+.login-container{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.top-space{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.middle-space{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box{
+    display: flex;
+    padding: 4px 16px;
+    position: relative;
+    flex-direction: column;
+}
+
+input {
+    flex: 1;
+    height: 44px;
+    border: solid 1px #a6a6a6;
+    padding: 0 20px;
+    font-size: 20px;
+}
+
+.tick {
+    position: absolute;
+    align-self: center;
+    right: 30px;
+    height: 20px;
+    width: 20px;
+    top: 61px;
+}
+
+.bottom-space{
+    flex: 1;
+}
+
+.welcome-text {
+    font-family: HelveticaNeue-Light;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 1.33;
+    color: #333333;
+    padding: 0 70px;
+}
+
+.invalid-number-message {
+    padding-bottom: 5px;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 2.67;
+    text-align: center;
+    color: #e83319;
+}
+
+.invalid-number {
+    border: 1px solid #e83319;
+    color: #e83319;
+}
+
+.back-link {
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 5em;
+    font-family: HelveticaNeue-Light;
+}

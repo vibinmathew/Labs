@@ -1,0 +1,26 @@
+{
+  "id" : "a6be6de4-187c-3666-958f-e7366bee2ea4",
+  "request" : {
+    "url" : "/v1/sms/messages",
+    "method" : "POST",
+    "headers" : {
+      "Authorization" : {
+        "equalTo" : "Bearer pvcz84cojNOdZIkYbCjkA07LAS12"
+      }
+    },
+    "bodyPatterns" : [ {
+      "equalToJson" : "{\"to\":\"0429876448\",\"body\":\"Hello !!\"}",
+      "ignoreArrayOrder" : true,
+      "ignoreExtraElements" : true
+    } ]
+  },
+  "response" : {
+    "status" : 202,
+    "bodyFileName" : "body-sms-messages-nlh6c.json",
+    "headers" : {
+      "Content-Type" : "application/json; charset=UTF-8",
+      "Connection" : "keep-alive"
+    }
+  },
+  "uuid" : "a6be6de4-187c-3666-958f-e7366bee2ea4"
+}

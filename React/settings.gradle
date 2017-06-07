@@ -1,0 +1,3 @@
+include 'datacat-api'
+include 'datacat-acceptance'
+

@@ -1,0 +1,11 @@
+---
+applications:
+  - name: datacat-web
+    host: datacat
+    buildpack: staticfile_buildpack
+    path: build/
+    instances: 2
+    memory: 128M
+    env:
+      FORCE_HTTPS: true
+      API_URL: https://datacat-api.cfapps.io

@@ -1,0 +1,25 @@
+security:
+  oauth2:
+    client:
+      client-id: ${vcap.services.telstra-dev-api.credentials.clientid}
+      client-secret: ${vcap.services.telstra-dev-api.credentials.secret}
+
+feature:
+  datapacks: ${vcap.services.feature-toggles.credentials.datapacks}
+
+frontend:
+  origin: ${vcap.services.frontend.credentials.origin}
+
+spring:
+  datasource:
+    url: ${cloud.services.mock-rti.connection.jdbcurl}
+    maxActive: ${vcap.services.rti-db.credentials.maxactive}
+  rtidatasource:
+    url: ${vcap.services.rti-db.credentials.url}
+    username: ${vcap.services.rti-db.credentials.username}
+    password: ${vcap.services.rti-db.credentials.password}
+    driverClassName: ${vcap.services.rti-db.credentials.driver}
+    maxActive: ${vcap.services.rti-db.credentials.maxactive}
+  ondbdatasource:
+    url: ${cloud.services.mock-rti.connection.jdbcurl}
+    maxActive: ${vcap.services.rti-db.credentials.maxactive}
