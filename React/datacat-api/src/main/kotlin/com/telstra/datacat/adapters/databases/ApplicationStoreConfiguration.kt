@@ -1,8 +1,0 @@
-package com.telstra.datacat.adapters.databases
-
-import org.springframework.context.annotation.Configuration
-import org.springframework.data.redis.repository.configuration.EnableRedisRepositories
-
-@Configuration
-@EnableRedisRepositories
-class ApplicationStoreConfiguration
